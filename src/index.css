@@ -1,0 +1,240 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+@layer base {
+  :root {
+    /* ── Light theme (default) ── */
+    --background: 210 40% 98%;       /* #F8FAFC off-white */
+    --foreground: 222 47% 11%;       /* #0F172A dark navy */
+
+    --card: 0 0% 100%;               /* pure white cards */
+    --card-foreground: 222 47% 11%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 47% 11%;
+
+    --primary: 221 83% 53%;          /* #2563EB deep blue */
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 210 40% 96%;        /* very light grey */
+    --secondary-foreground: 222 47% 20%;
+
+    --muted: 210 40% 96%;
+    --muted-foreground: 220 9% 46%;  /* #6B7280 soft grey */
+
+    --accent: 250 84% 64%;           /* indigo accent */
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --success: 142 71% 45%;
+    --success-foreground: 0 0% 100%;
+
+    --border: 214 32% 91%;           /* light border */
+    --input: 214 32% 91%;
+    --ring: 221 83% 53%;
+
+    --radius: 0.75rem;
+
+    /* ── Design tokens ── */
+    --gradient-primary: linear-gradient(135deg, hsl(221 83% 53%) 0%, hsl(250 84% 64%) 100%);
+    --gradient-hero: radial-gradient(ellipse at top, hsl(221 83% 53% / 0.10) 0%, transparent 60%);
+    --gradient-card: linear-gradient(135deg, hsl(0 0% 100%) 0%, hsl(210 40% 98%) 100%);
+    --glow-primary: 0 0 24px hsl(221 83% 53% / 0.25), 0 0 60px hsl(221 83% 53% / 0.08);
+    --glow-card: 0 4px 24px hsl(222 47% 11% / 0.08);
+    --shadow-card: 0 1px 3px hsl(222 47% 11% / 0.06), 0 8px 24px hsl(222 47% 11% / 0.06);
+
+    --sidebar-background: 210 40% 98%;
+    --sidebar-foreground: 222 47% 11%;
+    --sidebar-primary: 221 83% 53%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 210 40% 96%;
+    --sidebar-accent-foreground: 222 47% 11%;
+    --sidebar-border: 214 32% 91%;
+    --sidebar-ring: 221 83% 53%;
+  }
+
+  /* ── Dark mode ── */
+  .dark {
+    --background: 222 47% 6%;
+    --foreground: 210 40% 95%;
+
+    --card: 222 47% 10%;
+    --card-foreground: 210 40% 95%;
+
+    --popover: 222 47% 10%;
+    --popover-foreground: 210 40% 95%;
+
+    --primary: 221 83% 62%;
+    --primary-foreground: 222 47% 6%;
+
+    --secondary: 222 47% 15%;
+    --secondary-foreground: 210 40% 90%;
+
+    --muted: 222 47% 15%;
+    --muted-foreground: 215 20% 55%;
+
+    --accent: 250 84% 70%;
+    --accent-foreground: 222 47% 6%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --success: 142 71% 45%;
+    --success-foreground: 0 0% 100%;
+
+    --border: 222 47% 18%;
+    --input: 222 47% 18%;
+    --ring: 221 83% 62%;
+
+    --gradient-primary: linear-gradient(135deg, hsl(221 83% 62%) 0%, hsl(250 84% 70%) 100%);
+    --gradient-hero: radial-gradient(ellipse at top, hsl(221 83% 53% / 0.15) 0%, transparent 60%);
+    --gradient-card: linear-gradient(135deg, hsl(222 47% 10%) 0%, hsl(222 47% 13%) 100%);
+    --glow-primary: 0 0 24px hsl(221 83% 60% / 0.35), 0 0 70px hsl(221 83% 60% / 0.12);
+    --glow-card: 0 4px 24px hsl(0 0% 0% / 0.5);
+    --shadow-card: 0 1px 3px hsl(0 0% 0% / 0.3), 0 8px 24px hsl(0 0% 0% / 0.2);
+
+    --sidebar-background: 222 47% 6%;
+    --sidebar-foreground: 210 40% 95%;
+    --sidebar-primary: 221 83% 62%;
+    --sidebar-primary-foreground: 222 47% 6%;
+    --sidebar-accent: 222 47% 15%;
+    --sidebar-accent-foreground: 210 40% 95%;
+    --sidebar-border: 222 47% 18%;
+    --sidebar-ring: 221 83% 62%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: 'Poppins', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  }
+}
+
+@layer components {
+  /* Gradient text — blue → indigo */
+  .gradient-text {
+    @apply bg-clip-text text-transparent;
+    background-image: var(--gradient-primary);
+  }
+
+  /* Glass card — white bg with soft shadow in light mode */
+  .glass-card {
+    @apply bg-card border border-border rounded-2xl transition-all duration-300 ease-out;
+    box-shadow: var(--shadow-card);
+  }
+
+  .glass-card:hover {
+    @apply shadow-xl;
+    border-color: hsl(221 83% 53% / 0.35);
+    box-shadow: var(--glow-primary), var(--shadow-card);
+    transform: translateY(-4px);
+  }
+
+  .card-hover {
+    @apply transition-all duration-300 ease-out;
+  }
+
+  .card-hover:hover {
+    @apply shadow-xl;
+    transform: translateY(-6px) scale(1.01);
+  }
+
+  /* Gradient glow button */
+  .glow-button {
+    @apply relative overflow-hidden;
+    background-image: var(--gradient-primary);
+    box-shadow: 0 4px 15px hsl(221 83% 53% / 0.4);
+    transition: box-shadow 0.3s ease, transform 0.2s ease;
+  }
+
+  .glow-button:hover {
+    box-shadow: 0 6px 25px hsl(221 83% 53% / 0.55);
+    transform: translateY(-1px);
+  }
+
+  .section-heading {
+    @apply text-3xl md:text-4xl font-bold mb-4;
+  }
+
+  .section-subheading {
+    @apply text-muted-foreground text-lg max-w-2xl;
+  }
+
+  /* Nav link — dark navy with blue underline */
+  .nav-link {
+    @apply relative text-foreground/70 hover:text-primary font-medium transition-colors duration-300;
+  }
+
+  .nav-link::after {
+    content: '';
+    @apply absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 rounded-full;
+  }
+
+  .nav-link:hover::after {
+    @apply w-full;
+  }
+
+  /* Skill tag — light grey pill with blue border on hover */
+  .skill-tag {
+    @apply px-4 py-2 rounded-full bg-secondary text-foreground/80 text-sm font-medium border border-border
+           hover:border-primary/50 hover:bg-primary/10 hover:text-primary transition-all duration-300;
+  }
+
+  /* Floating shapes */
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  .animate-float-delayed {
+    animation: float 6s ease-in-out 2s infinite;
+  }
+
+  .animate-pulse-slow {
+    animation: pulse-slow 4s ease-in-out infinite;
+  }
+
+  /* Subtle dot-grid pattern for hero background */
+  .grid-pattern {
+    background-image:
+      radial-gradient(circle, hsl(221 83% 53% / 0.12) 1px, transparent 1px);
+    background-size: 32px 32px;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-20px) rotate(2deg);
+  }
+}
+
+@keyframes pulse-slow {
+  0%, 100% {
+    opacity: 0.4;
+  }
+  50% {
+    opacity: 0.8;
+  }
+}
