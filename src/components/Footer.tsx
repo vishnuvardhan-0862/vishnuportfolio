@@ -105,7 +105,7 @@ const Footer = () => {
             Made with <span className="text-red-500 animate-pulse inline-block">❤️</span> by <span className="text-slate-300 font-medium">Vishnuvardhan Komakula</span>
           </p>
           <p>
-            © {currentYear} All rights reserved
+            © {currentYear} All rights reserved to Vishnuvardhan
           </p>
           <p>
             Built with <span className="text-blue-400 font-medium">React + TailwindCSS</span>

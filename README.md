@@ -1,8 +1,6 @@
-# Welcome to your Lovable project
+# Portfolio Website
 
-## Project info
-
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+Personal portfolio website built with modern web technologies to showcase projects, skills, and professional experience.
 
 ## How can I edit this code?
 

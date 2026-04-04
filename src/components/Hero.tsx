@@ -143,24 +143,39 @@ const Hero = () => {
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-success opacity-75" />
                 <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-success" />
               </span>
-              <span className="text-xs font-semibold text-foreground">Available for opportunities</span>
+              <span className="text-xs font-semibold text-foreground">AI & ML Engineer</span>
             </motion.div>
           </motion.div>
 
           {/* ── Content ── */}
           <div className="text-center lg:text-left max-w-2xl">
-            {/* Hello badge */}
-            <motion.div
-              className="flex items-center gap-2 justify-center lg:justify-start mb-4"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.2, duration: 0.6 }}
-            >
-              <div className="flex items-center gap-2 px-3 py-1.5 bg-primary/10 border border-primary/20 rounded-full">
+            {/* Introduction Badges */}
+            <div className="space-y-4 mb-6">
+              {/* Availability badge */}
+              <motion.div
+                className="flex items-center gap-2 px-3.5 py-1.5 bg-blue-500/10 border border-blue-500/20 rounded-full w-fit mx-auto lg:mx-0"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.1, duration: 0.6 }}
+              >
+                <span className="relative flex h-2.5 w-2.5">
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full  bg-success opacity-75" />
+                  <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-success" />
+                </span>
+                <span className="text-foreground/90 font-medium text-xs">Open to Internships & Full-time Roles</span>
+              </motion.div>
+
+              {/* Hello badge */}
+              <motion.div
+                className="flex items-center gap-2 px-3 py-1.5 bg-primary/10 border border-primary/20 rounded-full w-fit mx-auto lg:mx-0"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.2, duration: 0.6 }}
+              >
                 <Sparkles className="w-4 h-4 text-primary" />
                 <span className="text-primary font-semibold text-sm">Hello, I'm</span>
-              </div>
-            </motion.div>
+              </motion.div>
+            </div>
 
             {/* Name */}
             <motion.h1
@@ -190,7 +205,7 @@ const Hero = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.45, duration: 0.6 }}
             >
-              B.Tech CSE (AI & ML) • CGPA: 8.83 • Final Year
+              B.Tech CSE (AI & ML) • CGPA: 8.83 • Graduated in 2026
             </motion.p>
 
             {/* Description */}
@@ -201,7 +216,7 @@ const Hero = () => {
               transition={{ delay: 0.5, duration: 0.6 }}
             >
               Passionate about solving real-world problems using intelligent systems. Strong foundation in Python,
-              Data Science, AI, SQL, and Machine Learning with hands-on project experience in building predictive
+              Data Science, AI, SQL, PowerBI & Excel, DL, NLP and Machine Learning with hands-on project experience in building predictive
               models and AI applications.
             </motion.p>
 

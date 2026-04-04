@@ -104,7 +104,7 @@ const Education = () => {
                       Completed
                     </span>
                     <span className="px-4 py-1.5 bg-indigo-50 dark:bg-indigo-900/40 text-indigo-600 dark:text-indigo-400 text-sm font-bold rounded-full flex items-center gap-2 h-fit">
-                      <Award className="w-4 h-4" /> 89.5%
+                      <Award className="w-4 h-4" /> CGPA: 8.95
                     </span>
                   </div>
                 </div>
@@ -164,7 +164,7 @@ const Education = () => {
                       Completed
                     </span>
                     <span className="px-4 py-1.5 bg-indigo-50 dark:bg-indigo-900/40 text-indigo-600 dark:text-indigo-400 text-sm font-bold rounded-full flex items-center gap-2 h-fit">
-                      <Award className="w-4 h-4" /> 100%
+                      <Award className="w-4 h-4" /> CGPA: 10
                     </span>
                   </div>
                 </div>
@@ -180,11 +180,10 @@ const Education = () => {
                   </div>
                 </div>
 
-                <div className="flex flex-wrap gap-3">
+                <div className="flex flex-col gap-3 items-start">
                   <span className="px-4 py-2 bg-slate-50 dark:bg-slate-800/60 text-sm rounded-full text-foreground/80 font-medium">
                     Board of Secondary Education
                   </span>
-
                   <span className="px-4 py-2 bg-slate-50 dark:bg-slate-800/60 text-sm rounded-full text-foreground/80 font-medium">
                     Sports, Basics+Curiosity+Discipline+Consistency=100%
                   </span>

@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Menu, X, Sun, Moon, Github, Linkedin } from 'lucide-react';
+import { Menu, X, Sun, Moon, Github, Linkedin, FileText } from 'lucide-react';
 import { useTheme } from './ThemeProvider';
 
 const navLinks = [
@@ -39,46 +39,55 @@ const Navigation = () => {
             VK
           </a>
 
-          {/* Desktop Nav */}
-          <div className="hidden md:flex items-center gap-1">
-            {navLinks.map((link) => (
-              <a
-                key={link.name}
-                href={link.href}
-                className="nav-link text-sm px-3 py-2 rounded-lg hover:bg-primary/10 transition-colors"
-              >
-                {link.name}
-              </a>
-            ))}
-          </div>
+          {/* Desktop Nav & Icons Group */}
+          <div className="hidden md:flex items-center gap-4">
+            <div className="flex items-center gap-1">
+              {navLinks.map((link) => (
+                <a
+                  key={link.name}
+                  href={link.href}
+                  className="nav-link text-base px-3 py-2 rounded-lg hover:bg-primary/10 transition-colors font-medium"
+                >
+                  {link.name}
+                </a>
+              ))}
+            </div>
 
-          {/* Right icons */}
-          <div className="hidden md:flex items-center gap-1">
-            <a
-              href="https://www.linkedin.com/in/vishnuvardhan-komakula"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="p-2 rounded-lg text-muted-foreground hover:text-primary hover:bg-primary/10 transition-all duration-300"
-              aria-label="LinkedIn"
-            >
-              <Linkedin size={18} />
-            </a>
-            <a
-              href="https://github.com/vishnuvardhan-0862"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="p-2 rounded-lg text-muted-foreground hover:text-primary hover:bg-primary/10 transition-all duration-300"
-              aria-label="GitHub"
-            >
-              <Github size={18} />
-            </a>
-            <button
-              onClick={toggleTheme}
-              className="p-2 rounded-lg text-muted-foreground hover:text-primary hover:bg-primary/10 transition-all duration-300"
-              aria-label="Toggle theme"
-            >
-              {theme === 'light' ? <Moon size={18} /> : <Sun size={18} />}
-            </button>
+            <div className="flex items-center gap-1 border-l border-border pl-4">
+              <a
+                href="https://www.linkedin.com/in/vishnuvardhan-komakula"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-2 rounded-lg text-muted-foreground hover:text-primary hover:bg-primary/10 transition-all duration-300"
+                aria-label="LinkedIn"
+              >
+                <Linkedin size={20} />
+              </a>
+              <a
+                href="https://github.com/vishnuvardhan-0862"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-2 rounded-lg text-muted-foreground hover:text-primary hover:bg-primary/10 transition-all duration-300"
+                aria-label="GitHub"
+              >
+                <Github size={20} />
+              </a>
+              <button
+                onClick={toggleTheme}
+                className="p-2 rounded-lg text-muted-foreground hover:text-primary hover:bg-primary/10 transition-all duration-300"
+                aria-label="Toggle theme"
+              >
+                {theme === 'light' ? <Moon size={20} /> : <Sun size={20} />}
+              </button>
+              <a
+                href="/VISHNU_Resume.pdf"
+                download="VISHNU_RESUME.pdf"
+                className="ml-2 px-4 py-2 bg-primary text-sm font-bold text-white rounded-lg hover:bg-primary/90 transition-all duration-300 flex items-center gap-2 shadow-lg shadow-primary/20"
+              >
+                <FileText size={16} />
+                Resume
+              </a>
+            </div>
           </div>
 
           {/* Mobile buttons */}
@@ -114,13 +123,23 @@ const Navigation = () => {
                   {link.name}
                 </a>
               ))}
-              <div className="flex items-center gap-3 pt-3 border-t border-border w-full justify-center mt-2">
-                <a href="https://www.linkedin.com/in/vishnuvardhan-komakula" target="_blank" rel="noopener noreferrer" className="p-2 rounded-lg text-muted-foreground hover:text-primary hover:bg-primary/10 transition-all">
-                  <Linkedin size={18} />
+              <div className="flex flex-col items-center gap-3 pt-3 border-t border-border w-full mt-2">
+                <a
+                  href="/VISHNU_Resume.pdf"
+                  download="VISHNU_RESUME.pdf"
+                  className="px-8 py-2.5 bg-primary text-white text-sm font-bold rounded-xl flex items-center gap-2 mb-2"
+                >
+                  <FileText size={16} />
+                  Download Resume
                 </a>
-                <a href="https://github.com/vishnuvardhan-0862" target="_blank" rel="noopener noreferrer" className="p-2 rounded-lg text-muted-foreground hover:text-primary hover:bg-primary/10 transition-all">
-                  <Github size={18} />
-                </a>
+                <div className="flex items-center gap-4">
+                  <a href="https://www.linkedin.com/in/vishnuvardhan-komakula" target="_blank" rel="noopener noreferrer" className="p-2 rounded-lg text-muted-foreground hover:text-primary hover:bg-primary/10 transition-all">
+                    <Linkedin size={20} />
+                  </a>
+                  <a href="https://github.com/vishnuvardhan-0862" target="_blank" rel="noopener noreferrer" className="p-2 rounded-lg text-muted-foreground hover:text-primary hover:bg-primary/10 transition-all">
+                    <Github size={20} />
+                  </a>
+                </div>
               </div>
             </div>
           </div>

@@ -89,9 +89,9 @@ const Projects = () => {
           {projects
             .filter((p) => p.featured)
             .map((project) => (
-              <ScrollReveal key={project.title} delay={0.1}>
+              <ScrollReveal key={project.title} delay={0.1} className="h-full">
               <div
-                className="glass-card p-8 hover:border-primary/50 transition-all duration-300 group overflow-hidden"
+                className="glass-card p-8 hover:border-primary/50 transition-all duration-300 group overflow-hidden flex flex-col h-full"
               >
                 {project.image && (
                   <div className="mb-6" style={{ perspective: '1200px' }}>
@@ -157,7 +157,7 @@ const Projects = () => {
                   ))}
                 </div>
 
-                <div className="flex gap-4">
+                <div className="flex gap-4 mt-auto">
                   <Button
                     variant="outline"
                     size="sm"
@@ -184,9 +184,9 @@ const Projects = () => {
           {projects
             .filter((p) => !p.featured)
             .map((project) => (
-              <ScrollReveal key={project.title} delay={0.05}>
+              <ScrollReveal key={project.title} delay={0.05} className="h-full">
               <div
-                className="glass-card p-6 hover:border-primary/50 transition-all duration-300 group"
+                className="glass-card p-6 hover:border-primary/50 transition-all duration-300 group flex flex-col h-full"
               >
                 <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors">
                   <project.icon className="w-6 h-6 text-primary" />
@@ -204,7 +204,7 @@ const Projects = () => {
                   href={project.github}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 text-sm text-primary hover:text-primary/80 transition-colors"
+                  className="inline-flex items-center gap-2 text-sm text-primary hover:text-primary/80 transition-colors mt-auto"
                 >
                   <Github className="w-4 h-4" />
                   View Code

@@ -21,6 +21,7 @@ const experiences = [
     title: 'Data Science Intern',
     company: 'CodSoft',
     duration: 'Feb 2025',
+    logoUrl: '/ds_intern_logo.png',
     description:
       'Worked on predictive analytics projects involving movie ratings, sales forecasting, and credit card approval predictions. Gained hands-on experience in data preprocessing, visualization, and model building.',
     highlights: [
@@ -35,7 +36,7 @@ const experiences = [
 
 const Experience = () => {
   return (
-    <section id="experience" className="py-12 lg:py-20 relative bg-background/60 backdrop-blur-sm">
+    <section id="experience" className="pt-12 lg:pt-20 pb-16 lg:pb-24 relative bg-background/60 backdrop-blur-sm">
       <div className="container mx-auto px-6">
         {/* Section Header */}
         <ScrollReveal>
@@ -56,7 +57,7 @@ const Experience = () => {
           {experiences.map((exp, index) => (
             <ScrollReveal key={exp.title + exp.company} delay={index * 0.15}>
             <div
-              className="relative pl-16 mb-8 last:mb-0"
+              className="relative pl-16 mb-24 last:mb-0"
             >
               {/* Timeline Dot */}
               <div className="absolute left-4 top-8 w-5 h-5 -translate-x-1/2 bg-primary rounded-full ring-4 ring-background" />

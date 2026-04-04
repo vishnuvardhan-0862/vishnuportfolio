@@ -1,4 +1,5 @@
 import { Code, Database, Wrench, MessageSquare } from 'lucide-react';
+import { motion } from 'framer-motion';
 import ScrollReveal from './ScrollReveal';
 
 const skillCategories = [
@@ -10,12 +11,12 @@ const skillCategories = [
   {
     icon: Database,
     title: 'Core Concepts',
-    skills: ['🧱 Object-Oriented Programming', '📊 Data Science', '🤖 Artificial Intelligence', '📈 Machine Learning', '🪜 Basic DSA'],
+    skills: ['🧱 Object-Oriented Programming', '📊 Data Science', '🤖 Artificial Intelligence', '📈 Machine Learning', '🧬 Deep Learning', '🗣️ NLP', '🪜 Basic DSA'],
   },
   {
     icon: Wrench,
     title: 'Tools & Technologies',
-    skills: ['🧪 Jupyter Notebook', '🐍 Anaconda', '💻 VS Code', '🐍 Python IDLE', '🛢️ MySQL', '🚀 Streamlit', '🔧 Git', '🐼 Pandas', '🔢 NumPy', '🤖 Scikit-learn', '📈 Matplotlib'],
+    skills: ['🧪 Jupyter Notebook', '🐍 Anaconda', '💻 VS Code', '🐍 Python IDLE', '🛢️ MySQL', '📊 PowerBI', '📈 Excel', '🚀 Streamlit', '🔧 Git', '🐼 Pandas', '🔢 NumPy', '🤖 Scikit-learn', '📈 Matplotlib'],
   },
   {
     icon: MessageSquare,
@@ -42,9 +43,9 @@ const Skills = () => {
         {/* Skills Grid */}
         <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
           {skillCategories.map((category, index) => (
-            <ScrollReveal key={category.title} delay={index * 0.1}>
+            <ScrollReveal key={category.title} delay={index * 0.1} className="h-full">
               <div
-                className="glass-card p-8 hover:border-primary/50 transition-all duration-300"
+                className="glass-card p-8 hover:border-primary/50 transition-all duration-300 h-full"
               >
                 <div className="flex items-center gap-4 mb-6">
                   <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center">
@@ -72,11 +73,13 @@ const Skills = () => {
             <div className="grid gap-6">
               {[
                 { name: 'Python', level: 90 },
+                { name: 'PowerBI & Excel', level: 90 },
                 { name: 'Artificial Intelligence', level: 85 },
                 { name: 'Machine Learning', level: 85 },
                 { name: 'Data Science', level: 85 },
                 { name: 'SQL', level: 80 },
                 { name: 'Deep Learning', level: 75 },
+                { name: 'NLP', level: 70 },
               ].map((skill) => (
                 <div key={skill.name} className="group">
                   <div className="flex justify-between mb-2">
@@ -84,9 +87,12 @@ const Skills = () => {
                     <span className="text-muted-foreground">{skill.level}%</span>
                   </div>
                   <div className="h-3 bg-secondary rounded-full overflow-hidden">
-                    <div
-                      className="h-full rounded-full bg-gradient-to-r from-primary to-primary/70 transition-all duration-1000 ease-out"
-                      style={{ width: `${skill.level}%` }}
+                    <motion.div
+                      className="h-full rounded-full bg-gradient-to-r from-primary to-primary/70"
+                      initial={{ width: 0 }}
+                      whileInView={{ width: `${skill.level}%` }}
+                      viewport={{ once: true }}
+                      transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1], delay: 0.2 }}
                     />
                   </div>
                 </div>

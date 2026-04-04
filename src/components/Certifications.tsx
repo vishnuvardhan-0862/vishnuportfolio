@@ -11,10 +11,24 @@ const certifications = [
   },
   {
     icon: Shield,
+    title: 'Getting Started with Generative AI',
+    issuer: 'IBM',
+    type: 'Course',
+    link: 'https://drive.google.com/file/d/17RM1h0-Cn9ojdenba4UOk6_D5AJVw2RR/view?usp=drive_link',
+  },
+  {
+    icon: Shield,
     title: 'Introduction to Cybersecurity',
     issuer: 'Simplilearn',
     type: 'Course',
     link: 'https://drive.google.com/file/d/1mHuykqI0woYKWQjgA7IpTU9Uq8iwCGZ8/view?usp=drive_link',
+  },
+  {
+    icon: Shield,
+    title: 'Google cloud AI',
+    issuer: 'Simplilearn',
+    type: 'Course',
+    link: 'https://drive.google.com/file/d/19IBAZgMoLHerAdTpONv4yut7TjQycEIK/view?usp=drive_link',
   },
   {
     icon: Cpu,
@@ -25,10 +39,17 @@ const certifications = [
   },
   {
     icon: Globe,
-    title: 'Cambridge English Empower B2 Level',
+    title: 'Cambridge English Empower B2 Level (RWLS)',
     issuer: 'Cambridge',
     type: 'Certification',
     link: 'https://drive.google.com/file/d/1gTIFT7tzc7GDuTeomAyidaCuCd3n_oNk/view?usp=drive_link',
+  },
+  {
+    icon: Globe,
+    title: 'English Proficient Test (C2 Proficient)',
+    issuer: 'EF SET',
+    type: 'Certification',
+    link: 'https://drive.google.com/file/d/1TN2CR806xgULMHoBVd29yMiSNKq0TjAu/view?usp=drive_link',
   },
   {
     icon: Users,
@@ -65,31 +86,31 @@ const Certifications = () => {
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
           {certifications.map((cert, index) => (
             <ScrollReveal key={cert.title} delay={index * 0.08}>
-            <div
-              className="glass-card p-8 min-h-[220px] flex flex-col justify-center hover:border-primary/50 transition-all duration-300 group"
-            >
-              <div className="flex items-start gap-5">
-                <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center flex-shrink-0 group-hover:bg-primary/20 transition-colors">
-                  <cert.icon className="w-6 h-6 text-primary" />
+              <div
+                className="glass-card p-8 min-h-[220px] flex flex-col justify-center hover:border-primary/50 transition-all duration-300 group"
+              >
+                <div className="flex items-start gap-5">
+                  <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center flex-shrink-0 group-hover:bg-primary/20 transition-colors">
+                    <cert.icon className="w-6 h-6 text-primary" />
+                  </div>
+                  <div className="flex-1">
+                    <span className="text-xs text-primary bg-primary/10 px-2 py-0.5 rounded-full">
+                      {cert.type}
+                    </span>
+                    <h3 className="font-semibold mt-2 mb-1">{cert.title}</h3>
+                    <p className="text-sm text-muted-foreground mb-3">{cert.issuer}</p>
+                    <a
+                      href={cert.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 text-sm text-primary hover:text-primary/80 transition-colors"
+                    >
+                      <ExternalLink className="w-4 h-4" />
+                      View Certificate
+                    </a>
+                  </div>
                 </div>
-                <div className="flex-1">
-                <span className="text-xs text-primary bg-primary/10 px-2 py-0.5 rounded-full">
-                  {cert.type}
-                </span>
-                <h3 className="font-semibold mt-2 mb-1">{cert.title}</h3>
-                <p className="text-sm text-muted-foreground mb-3">{cert.issuer}</p>
-                <a
-                  href={cert.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 text-sm text-primary hover:text-primary/80 transition-colors"
-                >
-                  <ExternalLink className="w-4 h-4" />
-                  View Certificate
-                </a>
-               </div>
               </div>
-            </div>
             </ScrollReveal>
           ))}
         </div>
