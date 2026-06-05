@@ -78,7 +78,7 @@ const Footer = () => {
           <div className="space-y-6">
             <h3 className="text-lg font-semibold text-white">Get In Touch</h3>
             <div className="space-y-3 text-sm text-slate-400">
-              <p className="flex items-center gap-2 hover:text-slate-300 transition-colors">
+              <p className="flex items-center gap-2 hover:text-slate-300 transition-colors break-all">
                 komakulavishnuvardhan0862@gmail.com
               </p>
               <p className="flex items-center gap-2 hover:text-slate-300 transition-colors">

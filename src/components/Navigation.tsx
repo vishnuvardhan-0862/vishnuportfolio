@@ -111,8 +111,8 @@ const Navigation = () => {
 
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
-          <div className="md:hidden absolute top-full left-0 right-0 bg-background/98 backdrop-blur-xl border-b border-border shadow-lg py-6">
-            <div className="flex flex-col items-center gap-2">
+          <div className="md:hidden absolute top-full left-0 right-0 h-[calc(100dvh-70px)] overflow-y-auto bg-background/95 backdrop-blur-xl border-b border-border shadow-lg py-6 pb-20">
+            <div className="flex flex-col items-center gap-2 min-h-full">
               {navLinks.map((link) => (
                 <a
                   key={link.name}
