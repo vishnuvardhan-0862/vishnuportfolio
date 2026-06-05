@@ -1,10 +1,37 @@
-import { ExternalLink, Github, Shield, Heart, Film, CreditCard, Car, Activity } from 'lucide-react';
+import { ExternalLink, Github, Shield, Heart, Film, CreditCard, Car, Activity, ShieldAlert, BarChart3 } from 'lucide-react';
 import ScrollReveal from './ScrollReveal';
 import { Button } from '@/components/ui/button';
 import hrvProjectImg from '@/assets/hrv-project.png';
 import cyberProjectImg from '@/assets/cyber-project.png';
+import predatorProjectImg from '@/assets/cyber-predator.png';
+import salesProjectImg from '@/assets/sales-dashboard.png';
 
 const projects = [
+  {
+    icon: BarChart3,
+    title: 'Sales Performance Dashboard (Excel)',
+    description:
+      'Built an interactive dashboard using Excel Pivot Tables to analyze monthly sales trends and performance insights. Provided a comprehensive view of sales data across different regions and products.',
+    tech: ['Excel', 'Pivot Tables', 'Data Analysis', 'Data Visualization'],
+    highlights: ['Monthly sales trends', 'Performance insights', 'Interactive Dashboard'],
+    image: salesProjectImg,
+    featured: true,
+    contain: true,
+    demo: 'https://drive.google.com/file/d/1hTkSdNrH8bxkcEp9lk3up2G2utM9Jb8A/view?usp=drive_link',
+  },
+  {
+    icon: ShieldAlert,
+    title: 'Cyber Predator Detection in Social Media using NLP & ML',
+    description:
+      'Developed an intelligent system that detects potentially harmful or predatory conversations in social media using NLP and Machine Learning models. The system analyzes user messages in real-time and identifies risks such as toxicity, grooming behavior, and emotional manipulation.',
+    tech: ['Python', 'FastAPI', 'Hugging Face', 'PyTorch', 'React', 'NLP', 'Machine Learning'],
+    highlights: ['Zero-shot classification', 'Real-time risk analysis', 'Multiple AI models'],
+    github: 'https://github.com/vishnuvardhan-0862/Cyber-Predator-Detection-in-Social-Media-using-NLP-and-ML',
+    image: predatorProjectImg,
+    featured: true,
+    contain: true,
+    demo: 'https://drive.google.com/file/d/1gXz1W0fCSZk2qDqwF-YzQVRSc79WGnqY/view?usp=drive_link',
+  },
   {
     icon: Shield,
     title: 'Modeling and Predicting Cyber Hacking Breaches',
@@ -15,6 +42,7 @@ const projects = [
     github: 'https://github.com/vishnuvardhan-0862/Modeling-and-Predicting-Cyber-Hacking-Breaches',
     image: cyberProjectImg,
     featured: true,
+    demo: 'https://drive.google.com/file/d/18y5Muaaegzo6351uWfWNJAaY3d8144l2/view?usp=drive_link',
   },
   {
     icon: Heart,
@@ -26,6 +54,7 @@ const projects = [
     github: 'https://github.com/vishnuvardhan-0862/Multi-Class-Stress-Detection-Through-HRV',
     image: hrvProjectImg,
     featured: true,
+    demo: 'https://drive.google.com/file/d/1-PEdT1jwGp54Q4-0foOPkFn7pO9bQYZD/view?usp=drive_link',
   },
   {
     icon: Film,
@@ -117,7 +146,7 @@ const Projects = () => {
                       <img
                         src={project.image}
                         alt={project.title}
-                        className="w-full h-56 object-cover object-top"
+                        className={`w-full h-72 transition-all duration-300 ${project.contain ? 'object-fill rounded-xl' : 'object-cover object-top'}`}
                         style={{ imageRendering: 'auto', filter: 'contrast(1.05) saturate(1.1) sharpen(1)' }}
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-background/20 via-transparent to-transparent opacity-60 group-hover:opacity-30 transition-opacity duration-500" />
@@ -158,21 +187,32 @@ const Projects = () => {
                 </div>
 
                 <div className="flex gap-4 mt-auto">
-                  <Button
-                    variant="outline"
-                    size="sm"
-                    className="border-primary/50 hover:bg-primary/10"
-                    asChild
-                  >
-                    <a href={project.github} target="_blank" rel="noopener noreferrer">
-                      <Github className="w-4 h-4 mr-2" />
-                      Code
-                    </a>
-                  </Button>
-                  <Button variant="ghost" size="sm" className="hover:bg-muted">
-                    <ExternalLink className="w-4 h-4 mr-2" />
-                    Demo
-                  </Button>
+                  {project.github && (
+                    <Button
+                      variant="outline"
+                      size="sm"
+                      className="border-primary/50 hover:bg-primary/10"
+                      asChild
+                    >
+                      <a href={project.github} target="_blank" rel="noopener noreferrer">
+                        <Github className="w-4 h-4 mr-2" />
+                        Code
+                      </a>
+                    </Button>
+                  )}
+                  {project.demo && (
+                    <Button
+                      variant="outline"
+                      size="sm"
+                      className="border-primary/50 hover:bg-primary/10 text-primary hover:text-primary"
+                      asChild
+                    >
+                      <a href={project.demo} target="_blank" rel="noopener noreferrer">
+                        <ExternalLink className="w-4 h-4 mr-2" />
+                        Demo
+                      </a>
+                    </Button>
+                  )}
                 </div>
               </div>
               </ScrollReveal>
@@ -200,15 +240,30 @@ const Projects = () => {
                     </span>
                   ))}
                 </div>
-                <a
-                  href={project.github}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 text-sm text-primary hover:text-primary/80 transition-colors mt-auto"
-                >
-                  <Github className="w-4 h-4" />
-                  View Code
-                </a>
+                <div className="flex gap-3 mt-auto">
+                  {project.github && (
+                    <a
+                      href={project.github}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 text-sm text-primary hover:text-primary/80 transition-colors"
+                    >
+                      <Github className="w-4 h-4" />
+                      Code
+                    </a>
+                  )}
+                  {project.demo && (
+                    <a
+                      href={project.demo}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 text-sm text-primary hover:text-primary/80 transition-colors"
+                    >
+                      <ExternalLink className="w-4 h-4" />
+                      Demo
+                    </a>
+                  )}
+                </div>
               </div>
               </ScrollReveal>
             ))}

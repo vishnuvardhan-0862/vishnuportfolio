@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import Navigation from '@/components/Navigation';
 import Hero from '@/components/Hero';
+import Stats from '@/components/Stats';
 import About from '@/components/About';
 import Education from '@/components/Education';
 import Skills from '@/components/Skills';
@@ -38,6 +39,7 @@ const Index = () => {
       <Navigation />
       <main className="relative z-10">
         <Hero />
+        <Stats />
         <About />
         <Education />
         <Skills />

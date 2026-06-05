@@ -48,7 +48,7 @@ const Footer = () => {
                 <Github size={18} className="group-hover:scale-110 transition-transform" />
               </a>
               <a
-                href="mailto:komakulavishnuvardhan@gmail.com"
+                href="mailto:komakulavishnuvardhan0862@gmail.com"
                 className="w-10 h-10 rounded-full bg-slate-900 border border-slate-800 flex items-center justify-center hover:bg-blue-500/10 hover:border-blue-500 hover:text-blue-400 transition-all duration-300 group"
                 aria-label="Email"
               >
@@ -79,7 +79,7 @@ const Footer = () => {
             <h3 className="text-lg font-semibold text-white">Get In Touch</h3>
             <div className="space-y-3 text-sm text-slate-400">
               <p className="flex items-center gap-2 hover:text-slate-300 transition-colors">
-                komakulavishnuvardhan@gmail.com
+                komakulavishnuvardhan0862@gmail.com
               </p>
               <p className="flex items-center gap-2 hover:text-slate-300 transition-colors">
                 Hyderabad, Telangana, India

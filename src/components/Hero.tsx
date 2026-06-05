@@ -134,7 +134,7 @@ const Hero = () => {
 
             {/* Available badge */}
             <motion.div
-              className="absolute -bottom-3 left-1/2 -translate-x-1/2 flex items-center gap-2 px-4 py-2 bg-white/90 backdrop-blur-md border border-border rounded-full shadow-lg whitespace-nowrap"
+              className="absolute -bottom-3 left-1/2 -translate-x-1/2 flex items-center gap-2 px-4 py-2 bg-background/90 backdrop-blur-md border border-border rounded-full shadow-lg whitespace-nowrap"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.6, duration: 0.5 }}
@@ -205,7 +205,7 @@ const Hero = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.45, duration: 0.6 }}
             >
-              B.Tech CSE (AI & ML) • CGPA: 8.83 • Graduated in 2026
+              B.Tech CSE (AI & ML) • CGPA: 8.83 • Graduated: 2026
             </motion.p>
 
             {/* Description */}
