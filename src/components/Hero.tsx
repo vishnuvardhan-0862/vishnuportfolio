@@ -67,7 +67,7 @@ const Hero = () => {
   const roles = ['AI & Machine Learning Engineer', 'Data Science Enthusiast', 'Python Developer', 'Problem Solver'];
 
   return (
-    <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section id="home" className="relative min-h-screen flex flex-col justify-start md:justify-center items-center overflow-hidden pt-28 pb-16 md:py-0">
       {/* Dot-grid background pattern */}
       <div className="absolute inset-0 grid-pattern opacity-60" />
 
@@ -93,7 +93,7 @@ const Hero = () => {
       <FloatingShape className="absolute bottom-1/4 right-20 w-7 h-7 bg-accent/15 rounded-full" delay={1} />
       <FloatingShape className="absolute top-1/2 left-12 w-5 h-5 border border-primary/30 rotate-45" delay={3} />
 
-      <div className="container mx-auto px-6 py-24 relative z-10">
+      <div className="container mx-auto px-6 py-0 md:py-24 relative z-10">
         <div className="flex flex-col lg:flex-row items-center gap-16 lg:gap-24">
 
           {/* ── Profile Image ── */}
