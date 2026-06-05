@@ -70,7 +70,7 @@ const Skills = () => {
         <ScrollReveal delay={0.3}>
           <div className="mt-12 max-w-4xl mx-auto">
             <h3 className="text-xl font-semibold text-center mb-6">Proficiency Overview</h3>
-            <div className="grid gap-6">
+            <div className="grid md:grid-cols-2 gap-6">
               {[
                 { name: 'Python', level: 90 },
                 { name: 'PowerBI & Excel', level: 90 },

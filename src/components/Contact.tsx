@@ -120,7 +120,7 @@ const Contact = () => {
 
           <ScrollReveal direction="left" delay={0.1}>
             {/* Left Column: Contact Form */}
-            <div className="bg-white/80 dark:bg-slate-900/80 backdrop-blur-md rounded-[2rem] p-8 md:p-10 shadow-xl shadow-black/5 border border-white/20 h-full">
+            <div className="bg-white/80 dark:bg-slate-900/80 backdrop-blur-md rounded-[2rem] p-5 md:p-10 shadow-xl shadow-black/5 border border-white/20 h-full">
               <div className="mb-8">
                 <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-2">Send a Message</h3>
                 <p className="text-muted-foreground">Fill out the form and I'll get back to you soon.</p>
@@ -197,7 +197,7 @@ const Contact = () => {
             <div className="flex flex-col gap-6 h-full justify-between">
 
               {/* Top Card: Contact Information */}
-              <div className="bg-white/80 dark:bg-slate-900/80 backdrop-blur-md rounded-[2rem] p-8 md:p-10 shadow-xl shadow-black/5 border border-white/20 flex-1">
+              <div className="bg-white/80 dark:bg-slate-900/80 backdrop-blur-md rounded-[2rem] p-5 md:p-10 shadow-xl shadow-black/5 border border-white/20 flex-1">
                 <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-8">
                   Contact Information
                 </h3>
@@ -229,7 +229,7 @@ const Contact = () => {
               </div>
 
               {/* Bottom Card: Let's Connect */}
-              <div className="bg-gradient-to-br from-blue-600 via-blue-500 to-indigo-600 rounded-[2rem] p-8 md:p-10 text-white shadow-2xl shadow-blue-500/20 relative overflow-hidden flex-shrink-0">
+              <div className="bg-gradient-to-br from-blue-600 via-blue-500 to-indigo-600 rounded-[2rem] p-5 md:p-10 text-white shadow-2xl shadow-blue-500/20 relative overflow-hidden flex-shrink-0">
                 {/* Subtle Abstract Particles / Mesh background effect */}
                 <div className="absolute top-0 right-0 -mr-20 -mt-20 w-64 h-64 bg-white opacity-10 rounded-full blur-3xl pointer-events-none" />
                 <div className="absolute bottom-0 left-0 -ml-20 -mb-20 w-80 h-80 bg-indigo-400 opacity-20 rounded-full blur-3xl pointer-events-none" />

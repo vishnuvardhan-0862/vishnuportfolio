@@ -87,7 +87,7 @@ const Certifications = () => {
           {certifications.map((cert, index) => (
             <ScrollReveal key={cert.title} delay={index * 0.08}>
               <div
-                className="glass-card p-8 min-h-[220px] flex flex-col justify-center hover:border-primary/50 transition-all duration-300 group"
+                className="glass-card p-5 sm:p-8 min-h-[220px] flex flex-col justify-center hover:border-primary/50 transition-all duration-300 group"
               >
                 <div className="flex items-start gap-5">
                   <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center flex-shrink-0 group-hover:bg-primary/20 transition-colors">

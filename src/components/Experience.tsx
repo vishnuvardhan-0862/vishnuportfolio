@@ -52,18 +52,18 @@ const Experience = () => {
         {/* Vertical Timeline */}
         <div className="max-w-3xl mx-auto relative">
           {/* Timeline Line */}
-          <div className="absolute left-6 top-0 bottom-0 w-px bg-border" />
+          <div className="absolute left-4 md:left-6 top-0 bottom-0 w-px bg-border" />
 
           {experiences.map((exp, index) => (
             <ScrollReveal key={exp.title + exp.company} delay={index * 0.15}>
             <div
-              className="relative pl-16 mb-24 last:mb-0"
+              className="relative pl-8 md:pl-16 mb-24 last:mb-0"
             >
               {/* Timeline Dot */}
-              <div className="absolute left-4 top-8 w-5 h-5 -translate-x-1/2 bg-primary rounded-full ring-4 ring-background" />
+              <div className="absolute left-4 md:left-6 top-8 w-5 h-5 -translate-x-1/2 bg-primary rounded-full ring-4 ring-background" />
 
               {/* Content */}
-              <div className="glass-card p-8 hover:border-primary/50 transition-all duration-300">
+              <div className="glass-card p-5 md:p-8 hover:border-primary/50 transition-all duration-300">
                 {/* Header */}
                 <div className="flex items-start gap-4 mb-4">
                   <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center flex-shrink-0 overflow-hidden">

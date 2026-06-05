@@ -17,7 +17,7 @@ const Education = () => {
       {/* Education Card */}
       <ScrollReveal delay={0.15}>
         <div className="max-w-4xl mx-auto">
-          <div className="glass-card p-8 md:p-10 relative overflow-hidden group hover:border-primary/50 transition-all duration-300">
+          <div className="glass-card p-5 md:p-10 relative overflow-hidden group hover:border-primary/50 transition-all duration-300">
             {/* Decorative Element */}
             <div className="absolute top-0 right-0 w-32 h-32 bg-primary/5 rounded-full blur-3xl group-hover:bg-primary/10 transition-colors" />
 
@@ -77,7 +77,7 @@ const Education = () => {
       {/* Intermediate Card */}
       <ScrollReveal delay={0.2}>
         <div className="max-w-4xl mx-auto mt-8">
-          <div className="glass-card p-6 md:p-8 relative overflow-hidden group hover:border-primary/50 transition-all duration-300">
+          <div className="glass-card p-5 md:p-8 relative overflow-hidden group hover:border-primary/50 transition-all duration-300">
             <div className="flex flex-col md:flex-row gap-6">
               {/* Icon */}
               <div className="flex-shrink-0">
@@ -137,7 +137,7 @@ const Education = () => {
       {/* 10th Card */}
       <ScrollReveal delay={0.25}>
         <div className="max-w-4xl mx-auto mt-8">
-          <div className="glass-card p-6 md:p-8 relative overflow-hidden group hover:border-primary/50 transition-all duration-300">
+          <div className="glass-card p-5 md:p-8 relative overflow-hidden group hover:border-primary/50 transition-all duration-300">
             <div className="flex flex-col md:flex-row gap-6">
               {/* Icon */}
               <div className="flex-shrink-0">
@@ -185,7 +185,7 @@ const Education = () => {
                     Board of Secondary Education
                   </span>
                   <span className="px-4 py-2 bg-slate-50 dark:bg-slate-800/60 text-sm rounded-full text-foreground/80 font-medium">
-                    Sports, Basics+Curiosity+Discipline+Consistency=100%
+                    Sports, Basics + Curiosity + Discipline + Consistency = 100%
                   </span>
                 </div>
               </div>

@@ -107,7 +107,7 @@ const Hero = () => {
             <div className="absolute -inset-5 bg-gradient-to-r from-primary/25 via-accent/15 to-primary/25 rounded-full blur-lg opacity-60 animate-pulse-slow" />
 
             {/* Photo */}
-            <div className="relative w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-white shadow-2xl">
+            <div className="relative w-52 h-52 sm:w-64 sm:h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-white shadow-2xl">
               <img
                 src={profilePhoto}
                 alt="Vishnuvardhan Komakula"

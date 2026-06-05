@@ -120,7 +120,7 @@ const Projects = () => {
             .map((project) => (
               <ScrollReveal key={project.title} delay={0.1} className="h-full">
               <div
-                className="glass-card p-8 hover:border-primary/50 transition-all duration-300 group overflow-hidden flex flex-col h-full"
+                className="glass-card p-5 sm:p-8 hover:border-primary/50 transition-all duration-300 group overflow-hidden flex flex-col h-full"
               >
                 {project.image && (
                   <div className="mb-6" style={{ perspective: '1200px' }}>
@@ -146,7 +146,7 @@ const Projects = () => {
                       <img
                         src={project.image}
                         alt={project.title}
-                        className={`w-full h-72 transition-all duration-300 ${project.contain ? 'object-fill rounded-xl' : 'object-cover object-top'}`}
+                        className={`w-full h-48 sm:h-72 transition-all duration-300 ${project.contain ? 'object-fill rounded-xl' : 'object-cover object-top'}`}
                         style={{ imageRendering: 'auto', filter: 'contrast(1.05) saturate(1.1) sharpen(1)' }}
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-background/20 via-transparent to-transparent opacity-60 group-hover:opacity-30 transition-opacity duration-500" />
