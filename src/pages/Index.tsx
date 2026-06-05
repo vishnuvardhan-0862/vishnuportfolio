@@ -29,7 +29,7 @@ const Index = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-background relative selection:bg-primary/20">
+    <div className="min-h-screen bg-background relative selection:bg-primary/20 overflow-x-hidden">
       <AnimatePresence>
         {isLoading && <LoadingScreen />}
       </AnimatePresence>
