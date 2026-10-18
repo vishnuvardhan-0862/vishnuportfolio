@@ -134,7 +134,7 @@ const Hero = () => {
 
             {/* Available badge */}
             <motion.div
-              className="absolute -bottom-3 left-1/2 -translate-x-1/2 flex items-center gap-2 px-4 py-2 bg-background/90 backdrop-blur-md border border-border rounded-full shadow-lg whitespace-nowrap"
+              className="absolute -bottom-3 left-1/2 -translate-x-1/2 flex items-center gap-2 px-4 py-2 bg-background/90 backdrop-blur-md border border-border rounded-full shadow-lg whitespace-nowrap min-w-[180px] justify-center"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.6, duration: 0.5 }}
@@ -143,7 +143,9 @@ const Hero = () => {
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-success opacity-75" />
                 <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-success" />
               </span>
-              <span className="text-xs font-semibold text-foreground">AI & ML Engineer</span>
+              <span className="text-xs font-semibold text-foreground">
+                <TypeWriter texts={['AI & ML Engineer', 'Data Scientist']} className="text-xs font-semibold text-foreground" />
+              </span>
             </motion.div>
           </motion.div>
 

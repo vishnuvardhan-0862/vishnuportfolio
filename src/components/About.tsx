@@ -33,29 +33,35 @@ const About = () => {
         </div>
       </ScrollReveal>
 
-      <div className="grid lg:grid-cols-2 gap-12 items-center">
+      <div className="grid lg:grid-cols-2 gap-12 items-stretch">
         <ScrollReveal direction="left">
           {/* About Text */}
           <div className="space-y-5">
-            <p className="text-muted-foreground leading-relaxed">I am a <span className="text-foreground font-medium">B.Tech Computer Science</span> student specializing in <span className="text-primary font-medium">Artificial Intelligence and Machine Learning</span>  from <span className="text-primary font-medium">Malla Reddy Institute of Engineering and Technology, Hyderabad</span>.</p>
-
-            <p className="text-muted-foreground leading-relaxed">With a <span className="text-primary font-medium">CGPA of 8.83</span>, I have built a strong foundation in <span className="text-foreground font-medium">Python, Object-Oriented Programming, Data Science, SQL, PowerBI & Excel, Basic DSA, DL, NLP</span> and core AI/ML concepts — enabling me to transform complex data into actionable insights.</p>
-
             <p className="text-muted-foreground leading-relaxed">
-              My internship experiences at <span className="text-foreground font-medium">CodSoft</span> and <span className="text-foreground font-medium">InternPE</span> have given me practical exposure to real-world data science and machine learning projects including <span className="text-foreground font-medium">predictive modeling</span> and <span className="text-foreground font-medium">data preprocessing</span>.
+              I am currently pursuing an <span className="text-foreground font-medium">MSc in Applied AI &amp; Data Science</span> at <span className="text-primary font-medium">Middlesex University London</span>, having completed my <span className="text-foreground font-medium">Bachelor of Technology (B.Tech)</span> in Computer Science and Engineering, specialising in <span className="text-primary font-medium">Artificial Intelligence and Machine Learning</span>, at <span className="text-primary font-medium">Malla Reddy Institute of Engineering and Technology, Hyderabad</span>, with a <span className="text-primary font-medium">CGPA of 8.90</span>.
             </p>
 
-            <p className="text-muted-foreground leading-relaxed">I believe in <span className="text-foreground font-medium">disciplined execution</span>, <span className="text-foreground font-medium">continuous learning</span>, and the power of <span className="text-foreground font-medium">teamwork</span>. I'm actively seeking opportunities to contribute to innovative AI solutions and grow as a professional.</p>
+            <p className="text-muted-foreground leading-relaxed">
+              I have a strong foundation in <span className="text-foreground font-medium">Python, Object-Oriented Programming (OOP), Data Science, SQL, Power BI, Excel, basic Data Structures and Algorithms (DSA), Deep Learning (DL), Natural Language Processing (NLP)</span>, and core AI/ML concepts. I am passionate about transforming complex data into meaningful insights and developing intelligent, data-driven solutions.
+            </p>
+
+            <p className="text-muted-foreground leading-relaxed">
+              Through my internships at <span className="text-foreground font-medium">CodSoft</span> and <span className="text-foreground font-medium">InternPE</span>, I gained practical exposure to data science and machine learning projects, including <span className="text-foreground font-medium">predictive modelling</span> and <span className="text-foreground font-medium">data preprocessing</span>. These experiences strengthened my analytical thinking, problem-solving abilities, and understanding of real-world AI applications.
+            </p>
+
+            <p className="text-muted-foreground leading-relaxed">
+              I believe in <span className="text-foreground font-medium">disciplined execution</span>, <span className="text-foreground font-medium">continuous learning</span>, <span className="text-foreground font-medium">collaboration</span>, and <span className="text-foreground font-medium">teamwork</span>. I am eager to apply my technical knowledge, enhance my practical skills, and contribute to innovative projects in <span className="text-primary font-medium">Artificial Intelligence, Machine Learning, and Data Science</span> while growing as a professional.
+            </p>
           </div>
         </ScrollReveal>
 
-        <ScrollReveal direction="right" delay={0.2}>
+        <ScrollReveal direction="right" delay={0.2} className="h-full">
           {/* Highlights Grid */}
-          <div className="grid sm:grid-cols-2 gap-6">
-            {highlights.map((item, index) => <div key={item.title} className="glass-card p-6 hover:border-primary/50 transition-all duration-300 group" style={{
+          <div className="grid grid-cols-2 grid-rows-2 gap-6 h-full">
+            {highlights.map((item, index) => <div key={item.title} className="glass-card p-6 hover:border-primary/50 transition-all duration-300 group flex flex-col" style={{
               animationDelay: `${index * 0.1}s`
             }}>
-              <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors">
+              <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors flex-shrink-0">
                 <item.icon className="w-6 h-6 text-primary" />
               </div>
               <h3 className="font-semibold mb-2">{item.title}</h3>

@@ -14,7 +14,76 @@ const Education = () => {
         </div>
       </ScrollReveal>
 
-      {/* Education Card */}
+      {/* MSc Card */}
+      <ScrollReveal delay={0.1}>
+        <div className="max-w-4xl mx-auto mb-8">
+          <div className="glass-card p-5 md:p-10 relative overflow-hidden group hover:border-primary/50 transition-all duration-300">
+            {/* Decorative Element */}
+            <div className="absolute top-0 right-0 w-32 h-32 bg-primary/5 rounded-full blur-3xl group-hover:bg-primary/10 transition-colors" />
+
+            <div className="flex flex-col md:flex-row gap-6">
+              {/* Icon */}
+              <div className="flex-shrink-0">
+                <div className="w-16 h-16 rounded-2xl bg-primary/10 flex items-center justify-center">
+                  <GraduationCap className="w-8 h-8 text-primary" />
+                </div>
+              </div>
+
+              {/* Content */}
+              <div className="flex-1 space-y-4">
+                <div className="flex flex-col md:flex-row md:justify-between md:items-start gap-4">
+                  <div>
+                    <h3 className="text-2xl font-bold mb-2">
+                      MSc Applied AI & Data Science
+                    </h3>
+                  </div>
+                  {/* Badges */}
+                  <div className="flex gap-3 flex-shrink-0">
+                    <span className="px-4 py-1.5 bg-green-50 dark:bg-green-900/30 text-green-600 dark:text-green-400 text-sm font-semibold rounded-full h-fit flex items-center gap-2">
+                      <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
+                      Pursuing
+                    </span>
+                  </div>
+                </div>
+
+                <p className="text-lg text-[#3b82f6] font-medium">
+                  Middlesex University
+                </p>
+
+                <div className="flex flex-wrap gap-6 text-sm">
+                  <div className="flex items-center gap-2 text-muted-foreground">
+                    <Calendar className="w-4 h-4 text-primary" />
+                    <span>2026 – 2028</span>
+                  </div>
+                  <div className="flex items-center gap-2 text-muted-foreground">
+                    <MapPin className="w-4 h-4 text-primary" />
+                    <span>London, United Kingdom</span>
+                  </div>
+                </div>
+
+                {/* Modules */}
+                <div className="pt-4 border-t border-border/50">
+                  <h4 className="font-medium mb-3">Modules</h4>
+                  <div className="flex flex-wrap gap-2">
+                    {[
+                      'AI-Enhanced Image Processing and Computer Vision',
+                      'Machine Learning and AI for Data Science',
+                      'Cloud and Big Data Technologies',
+                      'Applied Data Science: From Processing to NLP and LLMs',
+                      'Visual Data Analysis',
+                      'Legal and Ethical Aspects of Data Science and AI',
+                    ].map(course => <span key={course} className="skill-tag text-xs">
+                      {course}
+                    </span>)}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </ScrollReveal>
+
+      {/* B.Tech Education Card */}
       <ScrollReveal delay={0.15}>
         <div className="max-w-4xl mx-auto">
           <div className="glass-card p-5 md:p-10 relative overflow-hidden group hover:border-primary/50 transition-all duration-300">
@@ -31,13 +100,24 @@ const Education = () => {
 
               {/* Content */}
               <div className="flex-1 space-y-4">
-                <div>
-                  <h3 className="text-2xl font-bold mb-2">
-                    B.Tech – Computer Science Engineering
-                  </h3>
-                  <p className="text-xl gradient-text font-semibold">
-                    Specialization: Artificial Intelligence & Machine Learning
-                  </p>
+                <div className="flex flex-col md:flex-row md:justify-between md:items-start gap-4">
+                  <div>
+                    <h3 className="text-2xl font-bold mb-2">
+                      B.Tech – Computer Science Engineering
+                    </h3>
+                    <p className="text-xl gradient-text font-semibold">
+                      Specialization: Artificial Intelligence & Machine Learning
+                    </p>
+                  </div>
+                  {/* Badges */}
+                  <div className="flex gap-3 flex-shrink-0">
+                    <span className="px-4 py-1.5 bg-slate-100 dark:bg-slate-800 text-sm font-semibold text-slate-700 dark:text-slate-300 rounded-full h-fit flex items-center">
+                      Completed
+                    </span>
+                    <span className="px-4 py-1.5 bg-indigo-50 dark:bg-indigo-900/40 text-indigo-600 dark:text-indigo-400 text-sm font-bold rounded-full flex items-center gap-2 h-fit">
+                      <Award className="w-4 h-4" /> CGPA: 8.90
+                    </span>
+                  </div>
                 </div>
 
                 <p className="text-lg text-muted-foreground">
@@ -52,10 +132,6 @@ const Education = () => {
                   <div className="flex items-center gap-2 text-muted-foreground">
                     <MapPin className="w-4 h-4 text-primary" />
                     <span>Hyderabad, India</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <Award className="w-4 h-4 text-primary" />
-                    <span className="font-semibold text-foreground">CGPA: 8.83</span>
                   </div>
                 </div>
 

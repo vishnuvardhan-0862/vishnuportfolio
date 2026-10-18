@@ -22,13 +22,13 @@ const contactInfo = [
   {
     icon: Phone,
     label: 'Phone',
-    value: '+91 6304462346',
-    href: 'tel:+916304462346',
+    value: '+44 7344833304',
+    href: 'tel:+447344833304',
   },
   {
     icon: MapPin,
     label: 'Location',
-    value: 'Hyderabad, India',
+    value: 'London, United Kingdom',
     href: null,
   },
 ];

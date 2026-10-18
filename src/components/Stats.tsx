@@ -28,7 +28,7 @@ const stats = [
   },
   {
     label: 'CGPA',
-    value: '8.83',
+    value: '8.90',
     icon: Trophy,
     color: 'text-blue-600',
     bgColor: 'bg-blue-100',
