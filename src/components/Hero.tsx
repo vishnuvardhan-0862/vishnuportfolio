@@ -205,7 +205,7 @@ const Hero = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.45, duration: 0.6 }}
             >
-              B.Tech CSE (AI & ML) • CGPA: 8.83 • Graduated: 2026
+              MSc Applied AI & Data Science • Pursuing • Graduated: 2028
             </motion.p>
 
             {/* Description */}
